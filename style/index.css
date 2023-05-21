@@ -1,0 +1,219 @@
+body{
+    background: linear-gradient(90deg, rgb(255, 255, 255), rgba(145, 132, 132, 0.726));
+   background-attachment: fixed; /* Mantém o gradiente fixo na janela do navegador */
+}
+
+header{
+    padding: 30px 0px;
+}
+
+.caixa-header{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.entrada-saida{
+    width: 70%;
+    margin: 60px auto 10px auto;
+}
+
+.entrada-saida li{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.texto-entrada{
+    font-family: 'Montserrat', sans-serif;
+    color: darkblue;
+    font-weight: bold;
+    background: transparent;
+    resize: none;
+    margin-top: 20px;
+    width: 100vh;
+    height: 60vh;
+    border: none;
+    font-size: 18px;
+}
+
+.texto-entrada:focus{
+    outline: none;
+}
+
+.text-button{
+    position: relative;
+}
+
+
+.texto-saida{
+    background-color: #ffffff;
+    color: darkblue;
+    font-weight: bold;
+    background-image: url(../img/logo_saida.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    resize: none;
+    margin-left: 10px;
+    top: 10px;
+    padding: 15px;
+    font-size: 20px;
+    width: 32vh;
+    height: 65vh;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 4px 5px 20px 2px #000000;
+}
+
+.texto-saida::placeholder{
+    font-size: 0.8em;
+    color: #000000;
+    padding: 53vh 20px 0px 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.texto-saida:focus{
+    outline: none;
+}
+
+.botao-copiar{
+    position: absolute; 
+    top: 90%;
+    left: 50%;
+    transform: translate(-45.5%, -50%);
+    padding: 4% 25%;
+    border: 1px darkblue solid;
+    border-radius: 20px;
+    background-color: transparent;
+    display: none;
+}
+
+.botao-copiar:active{
+    background-color: #333131;
+    color: #ffffff;
+}
+
+.mensagem-aviso{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8em;
+    color:#333131;
+    margin: 1em 28%;
+}
+
+.mensagem-aviso img{
+    vertical-align: text-top;
+    width: 1em;
+}
+
+button{
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.12s all;
+}
+
+.buttons{
+    text-align: center;
+}
+
+.buttons li{
+    display: inline;
+}
+
+.criptografar{
+    margin-bottom: 10px;
+    width: 15%;
+    padding: 14px 0;
+    /* padding: 14px 80px; */
+    border: 1px darkblue solid;
+    background-color: darkblue;
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+
+.descriptografar{
+    margin-bottom: 10px;
+    margin-left: 1.5em;
+    width: 15%;
+    padding: 14px 0;
+    border: 1px darkblue solid;
+    background-color: #D8DFE8;;
+    color: #000000;
+    border-radius: 20px;
+}
+
+.criptografar:active, .descriptografar:active{
+    transform: scale(0.8);
+}
+
+footer{
+    margin-top: 40px;
+    background-color: #585353;
+    padding: 20px;
+}
+
+.contatos{
+    text-align: center;
+}
+
+.contatos li{
+    display: inline;
+    margin-left: 10px;
+}
+
+
+a img{
+    width: 35px;
+}
+
+
+@media screen and (max-width: 767px){
+    
+    .entrada-saida li{
+        display: block;
+    }
+
+    .texto-entrada{
+        width: 100%;
+        font-size: 26px;
+        margin-bottom: 20px;
+    } 
+    
+    .texto-saida{
+        background-image: none;
+        font-size: 22px;
+        height: 10vh;        
+        width: 90%;
+        margin-right: 32%;
+
+    }
+
+    .texto-saida::placeholder{
+        font-size: 1.2em;
+        color: #000000;
+        padding: 5px 15px 0px 10px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .buttons li{
+        display: block;
+    }
+
+    .criptografar, .descriptografar{
+        width: 70%;
+        margin-left: 0;
+    }
+
+    .texto-saida{
+        margin-left: 0;
+        width: 90%;
+    }
+
+    .mensagem-aviso{
+        margin: 1.5em;
+        font-size: 1.1em;
+        text-align: center;
+    }
+
+}
