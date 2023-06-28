@@ -16,7 +16,7 @@ function alterarCaixarDeSaida(conteudo){
 function criptografar(){
     let conteudo = document.getElementById("caixa-de-entrada").value;
 
-    if(/^[a-z]+$/.test(conteudo.replace(/\s+/g, "")) && !(/[áàâãäéèêëíïóôõöúü]/.test())){
+    if(/^[a-z]+$/.test(conteudo.replace(/\s+/g, "")) && !(/[áàâãäéèêëíïóôõöúü]/.test(conteudo))){
         
         conteudo = conteudo.split("");
         
@@ -39,7 +39,7 @@ function criptografar(){
 function descriptografar(){
     let conteudo = document.getElementById("caixa-de-entrada").value;
 
-    if(/^[a-z]+$/.test(conteudo.replace(/\s+/g, "")) && !(/[áàâãäéèêëíïóôõöúü]/.test())){
+    if(/^[a-z]+$/.test(conteudo.replace(/\s+/g, "")) && !(/[áàâãäéèêëíïóôõöúü]/.test(conteudo))){
         conteudo = conteudo.replace(/ai/g, "a").replace(/enter/g, "e").replace(/imes/g, "i").replace(/ober/g, "o").replace(/ufat/g, "u");
     
         if(conteudo.replace(/ /g, "") != ""){
